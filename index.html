@@ -7,7 +7,8 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" type="image/png" href="./Assets/fav-icon.png" />
-
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.20/dist/lenis.css">
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script> 
 </head>
 
 <body>
@@ -297,31 +298,8 @@
         </nav>
         <div class="bottom">© 2025 NIMBUS SHRESTHA. ALL RIGHTS RESERVED. ALL WRONGS RESERVED</div>
     </footer>
-
-    <script>
-        function resizeAllMasonryGrids() {
-            const containers = document.querySelectorAll('.ui-ux-image-container');
-
-            containers.forEach(grid => {
-                const rowHeight = parseInt(getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
-                const gap = parseInt(getComputedStyle(grid).getPropertyValue('gap'));
-
-                grid.querySelectorAll('img').forEach(item => {
-                    const rowSpan = Math.ceil((item.getBoundingClientRect().height + gap) / (rowHeight + gap));
-                    item.style.gridRowEnd = `span ${rowSpan}`;
-                });
-            });
-        }
-       
-        window.addEventListener('load', resizeAllMasonryGrids);
-        window.addEventListener('resize', resizeAllMasonryGrids);
-        
-        document.querySelectorAll('.ui-ux-image-container img').forEach(img => {
-            img.addEventListener('load', resizeAllMasonryGrids);
-        });
-    </script>
-
 </body>
-
+<script src="./masnory.js"></script>
+<script src="./lenis-smooth-scroll.js"></script>
 
 </html>
