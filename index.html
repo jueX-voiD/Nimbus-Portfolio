@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" type="image/png" href="./Assets/fav-icon.png" />
 
-
 </head>
 
 <body>
@@ -313,16 +312,15 @@
                 });
             });
         }
-
-        // Run on load and resize
+       
         window.addEventListener('load', resizeAllMasonryGrids);
         window.addEventListener('resize', resizeAllMasonryGrids);
-
-        // Recalculate when any image loads
+        
         document.querySelectorAll('.ui-ux-image-container img').forEach(img => {
             img.addEventListener('load', resizeAllMasonryGrids);
         });
     </script>
+
 </body>
 
 
