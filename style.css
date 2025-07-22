@@ -477,11 +477,17 @@ header {
   font-size: var(--font-20);
   display: flex;
   justify-content: space-between;
+  gap: 12px;
 }
 
 .about-institution {
   font-size: var(--font-20);
   color: #8f8f92;
+}
+
+.about-title span:nth-child(2) {
+  text-align: right;
+  display: block; /* required for text-align to work on span */
 }
 
 /* footer */
